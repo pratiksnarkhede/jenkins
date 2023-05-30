@@ -1,25 +1,25 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Build') {
             steps {
-                bat 'echo "Building..."'
-                // Add your build commands here using the Windows shell syntax
+                echo 'Building...'
+                // Add your build steps here
             }
         }
-        
+
         stage('Test') {
             steps {
-                bat 'echo "Running tests..."'
-                // Add your test commands here using the Windows shell syntax
+                echo 'Running tests...'
+                // Add your test steps here
             }
         }
-        
+
         stage('Deploy') {
             steps {
-                bat 'echo "Deploying..."'
-                // Add your deployment commands here using the Windows shell syntax
+                echo 'Deploying...'
+                // Add your deployment steps here
             }
         }
     }
