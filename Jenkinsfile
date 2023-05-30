@@ -5,6 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+                sudo apt-get update
+                sudo apt-get install python3
+
                 // Add your build steps here
             }
         }
