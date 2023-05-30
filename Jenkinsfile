@@ -1,31 +1,25 @@
 pipeline {
     agent any
+    
     stages {
         stage('Build') {
             steps {
-                echo "Building.."
-                sh '''
-                cd myapp
-                pip install -r requirements.txt
-                '''
+                bat 'echo "Building..."'
+                // Add your build commands here using the Windows shell syntax
             }
         }
+        
         stage('Test') {
             steps {
-                echo "Testing.."
-                sh '''
-                cd myapp
-                python3 hello.py
-                python3 hello.py --name=Brad
-                '''
+                bat 'echo "Running tests..."'
+                // Add your test commands here using the Windows shell syntax
             }
         }
-        stage('Deliver') {
+        
+        stage('Deploy') {
             steps {
-                echo 'Deliver....'
-                sh '''
-                echo "doing delivery stuff.."
-                '''
+                bat 'echo "Deploying..."'
+                // Add your deployment commands here using the Windows shell syntax
             }
         }
     }
